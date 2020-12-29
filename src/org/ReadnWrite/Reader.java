@@ -27,7 +27,7 @@ public class Reader {
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(
-					new FileReader("C:\\Users\\Nepal\\Desktop\\Fallout4Ach\\Fallout4AchieveMentsIhave.txt"));
+					new FileReader("FILE PATH"));
 			String line = reader.readLine();
 			int counter = 0;
 			while (line != null) {
@@ -47,7 +47,7 @@ public class Reader {
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(
-					new FileReader("C:\\Users\\Nepal\\Desktop\\Fallout4Ach\\Fallout4Achievements.txt"));
+					new FileReader("FILE PATH"));
 			String line = reader.readLine();
 			int counter = 0;
 			while (line != null) {
