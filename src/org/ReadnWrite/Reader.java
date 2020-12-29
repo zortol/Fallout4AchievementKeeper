@@ -82,7 +82,7 @@ public class Reader {
 		this.matcher();
 		try {
 			BufferedWriter writer = new BufferedWriter(
-					new FileWriter("C:\\Users\\Nepal\\Desktop\\Fallout4Ach\\Fallout4AchIneed.txt"));
+					new FileWriter("filePath"));
 			int counter = 0;
 			while (counter < this.whatIDontHave.size()) {
 				writer.append(this.whatIDontHave.get(counter) + "\n");
@@ -93,7 +93,7 @@ public class Reader {
 
 			// writer for Fallout4AchieveMentsIhave.txt
 			BufferedWriter writer2 = new BufferedWriter(
-					new FileWriter("C:\\Users\\Nepal\\Desktop\\Fallout4Ach\\Fallout4AchieveMentsIhave.txt"));
+					new FileWriter("filePath"));
 			int counter2 = 0;
 			while (counter2 < this.mine.size()) {
 				writer2.append(this.mine.get(counter2) + "\n");
