@@ -101,7 +101,6 @@ public class Reader {
 			}
 			writer2.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
