@@ -23,11 +23,41 @@ public class Reader {
 		this.whatIDontHave = new ArrayList<String>();
 	}
 
+	/**
+	 * If you are lazy, like me XD, instead of manually typing the achievement names
+	 * into notepad. You could extract the names of the achievements into a notepad
+	 * by copying the names in console
+	 */
+	public void readTheAchievementsIHave() {
+		BufferedReader reader;
+		try {
+			reader = new BufferedReader(new FileReader("FILE PATH"));
+			String line = reader.readLine();
+			int counter = 0;
+			while (line != null) {
+				if (line.contains("<h3 class=\"ellipsis\">")
+						&& !line.contains("<h3 class=\"ellipsis\">29 hidden achievements remaining</h3>")) {
+					counter++;
+					String firstHalf = line.replace("<h3 class=\"ellipsis\">", "");
+					String real = firstHalf.replace("</h3>", "");
+					String[] realer = real.split("						");
+					this.mine.add(realer[1]);
+					System.out.println("The Achievement i have : " + realer[1]);
+				}
+				line = reader.readLine();
+			}
+			reader.close();
+			System.out.println("The counter is :" + counter);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public void readerForMe() {
 		BufferedReader reader;
 		try {
-			reader = new BufferedReader(
-					new FileReader("FILE PATH"));
+			// file path for what achievements you have
+			reader = new BufferedReader(new FileReader("FILE PATH"));
 			String line = reader.readLine();
 			int counter = 0;
 			while (line != null) {
@@ -46,18 +76,14 @@ public class Reader {
 	public void readerForAllAch() {
 		BufferedReader reader;
 		try {
-			reader = new BufferedReader(
-					new FileReader("FILE PATH"));
+			// the file path for all the achievement in fallout 4
+			reader = new BufferedReader(new FileReader("FILE PATH"));
 			String line = reader.readLine();
-			int counter = 0;
 			while (line != null) {
 				this.achievements.add(line);
-				System.out.println(line);
 				line = reader.readLine();
-				counter++;
 			}
 			reader.close();
-			System.out.println("The counter is :" + counter);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -81,8 +107,8 @@ public class Reader {
 	public void writer() {
 		this.matcher();
 		try {
-			BufferedWriter writer = new BufferedWriter(
-					new FileWriter("filePath"));
+			// this file is the file that contains the achievements you need
+			BufferedWriter writer = new BufferedWriter(new FileWriter("FILE PATH"));
 			int counter = 0;
 			while (counter < this.whatIDontHave.size()) {
 				writer.append(this.whatIDontHave.get(counter) + "\n");
@@ -92,8 +118,7 @@ public class Reader {
 			writer.close();
 
 			// writer for Fallout4AchieveMentsIhave.txt
-			BufferedWriter writer2 = new BufferedWriter(
-					new FileWriter("filePath"));
+			BufferedWriter writer2 = new BufferedWriter(new FileWriter("FILE PATH"));
 			int counter2 = 0;
 			while (counter2 < this.mine.size()) {
 				writer2.append(this.mine.get(counter2) + "\n");
@@ -126,8 +151,9 @@ public class Reader {
 		 * comment eg. read.addAchievement("Nuclear Family");
 		 * read.addAchievement("Docile");
 		 */
+
 		read.readerForMe();
-		
+
 		read.readerForAllAch();
 
 		read.writer();
