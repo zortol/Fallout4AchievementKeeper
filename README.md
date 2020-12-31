@@ -1,4 +1,6 @@
 # Fallout4AchievementKeeper
+![DogMeat](https://user-images.githubusercontent.com/61877841/103414880-a799d480-4b77-11eb-8a43-63a21cec5315.jpg)
+
 Checks the remaining achievements you need for fallout 4
 Features:
 
