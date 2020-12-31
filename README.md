@@ -34,7 +34,7 @@ Moving on..
     REMEMBER:
     
       The order of the methods are important!!
-      1. addAchievement(optional)
+      1. addAchievement(String x) (optional)
       2. readerForMe()
       3. readerForAllAch()
       4. writer()
