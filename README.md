@@ -10,6 +10,7 @@ Once we have the following files we can proceed to start the program:
 
 ==============================================================================================================================================
 In order to extract what achievements you have:
+    
     1. Manually Type it on a notepad
     
     2. Head to Steam -> Goto Library -> Fallout 4 Menu -> Click on "View My Achievements" -> Right click & Click on "View Source.."
