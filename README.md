@@ -1,7 +1,8 @@
 # Fallout4AchievementKeeper
 ![DogMeat](https://user-images.githubusercontent.com/61877841/103414880-a799d480-4b77-11eb-8a43-63a21cec5315.jpg)
 # THIS PROGRAM CAN ONLY BE DONE IN AN IDE OR EDITOR
-Checks the remaining achievements you need for fallout 4
+!windows compatability currently!  
+Checks the remaining achievements you need for fallout 4  
 Features:
 
         - Writes into a text file which achievements you need.
